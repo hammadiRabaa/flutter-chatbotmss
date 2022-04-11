@@ -1,7 +1,7 @@
 from flask import Flask, jsonify,request
 import time
 app = Flask(__name__);
-@app.route("/bot", methods=["POST"])
+@app.route("https://flutter-chatbotappmss.herokuapp.com/bot", methods=["POST"])
 def response():
     query = dict(request.form)['query']
     res = query + " " + time.ctime()
