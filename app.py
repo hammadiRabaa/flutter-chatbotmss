@@ -1,10 +1,10 @@
 from flask import Flask, jsonify, request 
 import time 
 app = Flask(__name__)
-app.route("/bot" , method = ["POST"])
+app.route("/bot" , method=["POST"])
 def response () : 
     query = dict(request.form)['query']
-    result = "tu as ecrit : " query + " au " + time.ctime()
+    result = "tu as ecrit : " + query
     return jsonify({"response" : result})
 
 
